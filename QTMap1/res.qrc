@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>yourname.jpg</file>
+        <file>play.jpg</file>
+        <file>back.jpg</file>
+        <file>3.png</file>
+        <file>di2.jpg</file>
+        <file>1g.jpg</file>
+        <file>2g.jpg</file>
+        <file>tu1.jpg</file>
+        <file>tu2.jpg</file>
+    </qresource>
+</RCC>
