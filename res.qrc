@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>yourname.jpg</file>
+        <file>play.jpg</file>
+        <file>back.jpg</file>
+        <file>3.png</file>
+        <file>di2.jpg</file>
+        <file>1g.jpg</file>
+        <file>2g.jpg</file>
+        <file>tu1.jpg</file>
+        <file>tu2.jpg</file>
+        <file>an.jpg</file>
+        <file>guai1.png</file>
+        <file>guai2.png</file>
+        <file>an1.jpg</file>
+        <file>2.png</file>
+        <file>1.png</file>
+        <file>bgm1.mp3</file>
+        <file>bgm2.mp3</file>
+    </qresource>
+</RCC>
