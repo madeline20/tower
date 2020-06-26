@@ -8,11 +8,11 @@
 #include<QTimer>
 #include <QPushButton>
 
-namespace Ui {
+/*namespace Ui {
 class MW1;
-}
+}*/
 
-class MW1 : public QMainWindow
+class MW1 : public QMainWindow//第一个界面，有总音量函数
 {
     Q_OBJECT
 
@@ -20,10 +20,9 @@ public:
     explicit MW1(QWidget *parent = 0);
     ~MW1();
     void paintEvent(QPaintEvent *);
-     void sound();//����
-
+    void sound();
 private:
-    Ui::MW1 *ui;
+    //Ui::MW1 *ui;
 
 };
 

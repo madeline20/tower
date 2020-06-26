@@ -1,10 +1,15 @@
 #include "mybutton.h"
 #include<QPixmap>
+#include<QAction>
 MyButton::MyButton(QString pix) : QPushButton(0)
 {
-QPixmap pixmap(pix);//ÒòÎª²»ÖªµÀ°´Å¥ÓÐ¶à´ó
-this->setFixedSize(pixmap.width(),pixmap.height());
-this->setStyleSheet("QPushButton{border:Opx}");//Éè¶¨Ò»¸öÑùÊ½
+QPixmap pixmap(pix);//å› ä¸ºä¸çŸ¥é“æŒ‰é’®æœ‰å¤šå¤§
+/*this->setFixedSize(pixmap.width(),pixmap.height());
+this->setStyleSheet("QPushButton{border:Opx}");//è®¾å®šä¸€ä¸ªæ ·å¼
 this->setIcon(pixmap);
-this->setIconSize(QSize(pixmap.width(),pixmap.height()));//´«Ò»¸öÍ¼Æ¬
+this->setIconSize(QSize(pixmap.width(),pixmap.height()));//ä¼ ä¸€ä¸ªå›¾ç‰‡*/
+this->setFixedSize(100,100);
+this->setStyleSheet("QPushButton{border:0px;}");
+this->setIcon(pixmap);
+this->setIconSize(QSize(100,100));
 }

@@ -3,7 +3,7 @@
 
 #include <QWidget>
 #include<QPushButton>
-class MyButton : public QPushButton
+class MyButton : public QPushButton//按钮，界面跳转作用
 {
     Q_OBJECT
 public:

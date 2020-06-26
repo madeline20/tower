@@ -1,6 +1,4 @@
 #include "mywindow.h"
-#include<QMediaPlaylist>
-#include<QMediaPlayer>
 #include <QTime>
 #include<QTimer>
 #include <map>
@@ -11,64 +9,54 @@
 #include<QPaintEvent>
 #include<QDebug>
 #include"g1.h"
-#include"g2.h"
 #include"mybutton.h"
 #include"mywindow.h"
 using namespace std;
 MyWindow::MyWindow(QWidget *parent) : QMainWindow(parent)
 {
  this->setFixedSize(1200,700);
- MyButton*backbtn=new MyButton(":/back.jpg");//·µ»Ø°´Å¥
- backbtn->setParent(this);//ÉèÖÃ¸¸Àà
+ MyButton*backbtn=new MyButton(":/image/back.jpg");//è¿”å›žæŒ‰é’®
+ backbtn->setParent(this);//è®¾ç½®çˆ¶ç±»
  backbtn->move(40,40);
- //ÕâÀïÒªÉèÖÃ¹Ø¿¨£¬ÓÐ¼¸¹Ø´´½¨¼¸¸öÐÂ½çÃæ
+ //è¿™é‡Œè¦è®¾ç½®å…³å¡ï¼Œæœ‰å‡ å…³åˆ›å»ºå‡ ä¸ªæ–°ç•Œé¢
 
- MyButton*onetn=new MyButton(":/1g.jpg");
+ MyButton*onetn=new MyButton(":/image/1g.jpg");
  onetn->setParent(this);
  onetn->move(300,100);
- MyButton*twotn=new MyButton(":/2g.jpg");
+ MyButton*twotn=new MyButton(":/image/2g.jpg");
  twotn->setParent(this);
  twotn->move(500,300);
  connect(backbtn,&MyButton::clicked,this,[=](){
   emit chooseback();
-  });//Ã»ÓÐÕâÒ»¾ä¼ÓÔØ²»³öÀ´Á½¸ö°´Å¥
- g1 *scene=new g1;//½¨Ò»¸öÐÂµÄ½çÃæ£¬ÇÐ»»
+  });//æ²¡æœ‰è¿™ä¸€å¥åŠ è½½ä¸å‡ºæ¥ä¸¤ä¸ªæŒ‰é’®
+ g1 *scene=new g1(1);//å»ºä¸€ä¸ªæ–°çš„ç•Œé¢ï¼Œåˆ‡æ¢
  connect(onetn,&MyButton::clicked,this,[=](){
      this->hide();
      scene->show();
- });//[](){}()ÕâÊÇ¸ö±í´ïÊ½£¬ÄÜÓÃÀàÀïÃæÈÎºÎ¶«Î÷
+     scene->gameStart();
+ });//[](){}()è¿™æ˜¯ä¸ªè¡¨è¾¾å¼ï¼Œèƒ½ç”¨ç±»é‡Œé¢ä»»ä½•ä¸œè¥¿
  connect(scene,&g1::chooseback,this,[=](){
-     scene->hide();//Ô­½çÃæÒþ²Ø
+     scene->hide();//åŽŸç•Œé¢éšè—
      this->show();
- });//µÚÒ»¹ØµÄÇÐ»»
+ });//ç¬¬ä¸€å…³çš„åˆ‡æ¢
 
 
-g2 *scene1=new g2;//½¨Ò»¸öÐÂµÄ½çÃæ£¬ÇÐ»»
+g1 *scene1=new g1(2);//å»ºä¸€ä¸ªæ–°çš„ç•Œé¢ï¼Œåˆ‡æ¢
  connect(twotn,&MyButton::clicked,this,[=](){
      this->hide();
      scene1->show();
- });//[](){}()ÕâÊÇ¸ö±í´ïÊ½£¬ÄÜÓÃÀàÀïÃæÈÎºÎ¶«Î÷
- connect(scene1,&g2::chooseback,this,[=](){
-     scene1->hide();//Ô­½çÃæÒþ²Ø
+     scene1->gameStart();
+ });//[](){}()è¿™æ˜¯ä¸ªè¡¨è¾¾å¼ï¼Œèƒ½ç”¨ç±»é‡Œé¢ä»»ä½•ä¸œè¥¿
+connect(scene1,&g1::chooseback,this,[=](){
+     scene1->hide();//åŽŸç•Œé¢éšè—
      this->show();
- });//µÚer¹ØµÄÇÐ»»
-//ÕâÀï³öÏÖ¹ýÌ×ÍÞÎÊÌâ£¡£¡£¡
- MyButton*btn1=new MyButton(":/button1.jpg");//·µ»Ø°´Å¥
- btn1->setParent(this);//ÉèÖÃ¸¸Àà
- btn1->move(100,100);
- MyButton*btn2=new MyButton(":/button2.jpg");//·µ»Ø°´Å¥
- btn2->setParent(this);//ÉèÖÃ¸¸Àà
- btn2->move(150,100);
-connect(backbtn,&MyButton::clicked,this,[=](){
- emit chooseback();
- });
-
+ });//ç¬¬erå…³çš„åˆ‡æ¢*/
+//è¿™é‡Œå‡ºçŽ°è¿‡å¥—å¨ƒé—®é¢˜ï¼ï¼ï¼
 }
 
 
 void MyWindow::paintEvent(QPaintEvent *){
     QPainter painter(this);
-    QPixmap pixmap(":/di2.jpg");
+    QPixmap pixmap(":/image/di2.jpg");
     painter.drawPixmap(0,0,this->width(),this->height(),pixmap);
-}//Ñ¡¹Ø±³¾°
-
+}//é€‰å…³èƒŒæ™¯

@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/Bg.png</file>
+        <file>image/bullet.png</file>
+        <file>image/Default.png</file>
+        <file>image/enemy.png</file>
+        <file>image/icon_gold.png</file>
+        <file>image/icon_HP.png</file>
+        <file>image/open_spot.png</file>
+        <file>image/tower.png</file>
+        <file>config/Info.plist</file>
+        <file>image/1g.jpg</file>
+        <file>image/2g.jpg</file>
+        <file>image/3.png</file>
+        <file>image/anniu3.png</file>
+        <file>image/back.jpg</file>
+        <file>image/bgm1.mp3</file>
+        <file>image/bgm2.mp3</file>
+        <file>image/di2.jpg</file>
+        <file>image/guan1.jpg</file>
+        <file>image/guan2.jpg</file>
+        <file>image/play.jpg</file>
+        <file>image/sound.jpg</file>
+        <file>image/yourname.jpg</file>
+        <file>image/2.png</file>
+        <file>image/guai.png</file>
+        <file>image/1.png</file>
+        <file>image/bluetower.png</file>
+        <file>image/snow.png</file>
+        <file>cundang1/2.png</file>
+        <file>image/pause.png</file>
+        <file>music/tower_place.wav</file>
+        <file>image/tu1.jpg</file>
+        <file>image/tu2.jpg</file>
+    </qresource>
+</RCC>

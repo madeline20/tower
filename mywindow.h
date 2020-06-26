@@ -10,10 +10,11 @@
 #include<QKeyEvent>
 #include<QTimer>
 #include <QPushButton>
+#include"g1.h"
 //namespace U {
 //class MyWindow;
 //}
-class MyWindow : public QMainWindow
+class MyWindow : public QMainWindow//选择关卡界面
 {
     Q_OBJECT
 public:
@@ -21,12 +22,12 @@ public:
     void set_tower();
     //~MyWindow();
     void paintEvent(QPaintEvent *);
-
 private:
-    QList<tower*>tower_list;
+    QList<Tower*>tower_list;
+    friend class g1;
    signals:
    // U::MyWindow*u;
-void chooseback();//Ҫ��ͨmywindow��mw1
+void chooseback();
 public slots:
 };
 
